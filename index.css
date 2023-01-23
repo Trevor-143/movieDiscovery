@@ -11,6 +11,80 @@ body {
     background-color: #000;
 }
 
+.top {
+    width: 100%;
+    min-height: 500px;
+    background-image: url(./wall.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.high {
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding-top: 8%;
+    flex-direction: column;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+.high h1 {
+    font-size: 50px;
+}
+h1 span {
+    color: #c70000;
+}
+.high p {
+    max-width: 600px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+form {
+    /* border: 1px solid #c70000; */
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+form input {
+    width: 75%;
+    border: none;
+    background: none;
+}
+form input:focus {
+    outline: none;
+}
+form button {
+    width: 80px;
+    border: 1px solid rgb(0, 0, 0);
+    color: #fff;
+
+    background: #000;
+    height: 35px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+form button:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+}
+
+
+.movFound:hover, .movFound:hover img {
+    width: 400px;
+}
+
+.movFound:hover .poster {
+    opacity: 0.4;
+    z-index: -2;
+    
+}
+
 .show {
     display: flex;
     flex-direction: column;
@@ -19,7 +93,8 @@ body {
     color: rgb(211, 211, 211);
     font-weight: 400;
     padding-left: 20px;
-    margin: 7px 0;
+    margin-top: 10px;
+    margin-bottom: 6px;
     font-size: 20px;
     letter-spacing: 1px;
 }
@@ -42,14 +117,16 @@ ul li {
     position: relative;
     width: 200px;
     height: 250px;
+    transition: 0.4s;
 }
+
 
 ul li img {
     width: 200px;
     height: 250px;
     object-fit: cover;
-    border-radius: 10px;
-    
+    border-radius: 5px;
+    transition: 0.4s;
 }
 ul li div {
     position: absolute;
@@ -64,7 +141,7 @@ ul li div {
     opacity: 0;
     transform: translateY(20px);
     transition: 0.6s;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 ul li div:hover {
@@ -106,6 +183,11 @@ ul li p {
     -webkit-line-clamp: 4; /* number of lines to show */
             line-clamp: 4; 
     -webkit-box-orient: vertical;
+}
+.foundMovies {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 footer {
     height: 200px;

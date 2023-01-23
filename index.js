@@ -98,23 +98,21 @@ function getSearched() {
                             </li>`
 
             document.getElementById('foundMovies').innerHTML = foundMovies;
-            console.log(movie)
+            // console.log(movie)
         
         })
     });
 }
-ressSpan.innerHTML = ''
 
 btn.addEventListener('click', (e) => {
     foundMovies = '';
     e.preventDefault()
-    if (search_text.value !== null ) {
-        ressSpan.innerHTML = `<span class="ress">Your search results</span> 
-                            <i class="fa-solid fa-chevron-left rel"></i>
-                            <i class="fa-solid fa-chevron-right rer"></i>`
+    if (search_text.value !== null && search_text.value !== '') {
         getSearched();
+        ressSpan.classList.add('active');
     } else {
-        ressSpan.innerHTML = '';
+        ressSpan.classList.remove('active');
+        document.getElementById('foundMovies').innerHTML = '';
     }
 });
 

@@ -88,7 +88,6 @@ function getSearched() {
         data.results.forEach(movie => {
             foundMovies += `<li class="movFound">
                                 <img class="poster" src="${imgApi}${movie.poster_path}" alt="" >
-                                <img class="backdrop" src="${imgApi}${movie.backdrop_path}" alt="" >
                                 <div>
                                     <p>${movie.overview}</p>
                                     <h3>${movie.title}</h3>
